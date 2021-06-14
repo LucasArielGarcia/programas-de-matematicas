@@ -127,9 +127,20 @@ def paralelas():
 
     print ("x=",res1, " y = ",res2, "z = ",res3)
 
+def perpendiculares():
+    vec1 = []
+    vec2 = []
+    for i in  range(3):
+            ingreso = int(input('ingrese el numero del vector1 '))
+            vec1.append(ingreso)
+    for  i  in range(3):
+        ingreso = int(input('ingrese el numero del vector2 '))
+        vec2.append(ingreso)
+    vec3 = vec1[0]*vec2[0] + vec1[1]*vec2[1] + vec1[2]*vec2[2]
+    print(vec3)
 
 # ------ progama proncipal -----------
-opcion = int(input('elija opcion, 1 restar, 2 sumar, 3 modulo, 4 graficar en 2D, 5 para graficar en 3D, 6 para matrices, 7 paralelas. -1 para salir'))
+opcion = int(input('elija opcion, 1 restar, 2 sumar, 3 modulo, 4 graficar en 2D, 5 para graficar en 3D, 6 para matrices, 7 paralelas, perpendiculares. -1 para salir'))
 
 while opcion != -1:
     if opcion == 1:
@@ -147,5 +158,7 @@ while opcion != -1:
         matrices()
     elif opcion == 7:
         paralelas()
-    opcion = int(input('elija opcion, 1 restar, 2 sumar, 3 modulo, 4 graficar en 2d,5 para graficar en 3D, 6 para matrices, 7 paralelas. -1 para salir'))
+    elif opcion == 8:
+        perpendiculares()
+    opcion = int(input('elija opcion, 1 restar, 2 sumar, 3 modulo, 4 graficar en 2d,5 para graficar en 3D, 6 para matrices, 7 paralelas, 8 perpendiculares. -1 para salir'))
         
